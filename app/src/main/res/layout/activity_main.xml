@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/tvMilkProduction"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -67,7 +67,8 @@
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="FirstName" />
+            android:hint="FirstName"
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -95,7 +96,8 @@
             android:id="@+id/etSecondName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Second Name" />
+            android:hint="Second Name"
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -109,7 +111,7 @@
         app:srcCompat="@drawable/number_sign_110_svgrepo_com" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilMembershipNumberLogin"
+        android:id="@+id/tilSignUpMembershipNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
@@ -120,10 +122,12 @@
         app:layout_constraintTop_toTopOf="@+id/imageView12">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMembershipNumberLogin"
+            android:id="@+id/etSignUpMembershipNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Membership Number" />
+            android:hint="Membership Number"
+            android:inputType="number"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -133,7 +137,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilMembershipNumberLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tilSignUpMembershipNumber"
         app:srcCompat="@drawable/password_lock_solid_svgrepo_com" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -144,14 +148,18 @@
         android:layout_marginEnd="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="@+id/imageView13">
+        app:layout_constraintTop_toTopOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.0"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -179,17 +187,19 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView14">
+        app:layout_constraintTop_toTopOf="@+id/imageView14"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password" />
+            android:hint="Confirm Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
@@ -208,16 +218,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
     <TextView
         android:id="@+id/idLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
         android:text="Sign In"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword"
-        app:layout_constraintVertical_bias="0.785"
-        tools:layout_editor_absoluteX="286dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

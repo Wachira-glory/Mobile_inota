@@ -13,6 +13,30 @@
         android:theme="@style/Theme.InotaPlus"
         tools:targetApi="31">
         <activity
+            android:name=".MessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MilkTableActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.akirachix.new_mentorgram.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomepageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MilkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CollateralActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.akirachix.inotaplus.HomepageActivity
 import com.akirachix.inotaplus.MainActivity
 import com.akirachix.inotaplus.databinding.ActivityLoginBinding
 
@@ -16,22 +17,20 @@ class LoginActivity : AppCompatActivity() {
         binding =ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.idRegister.setOnClickListener {
-            val intent=Intent(this,MainActivity::class.java)
+        binding.btnSignIn.setOnClickListener {
+            val intent=Intent(this,HomepageActivity::class.java)
             startActivity(intent)
         }
-//        enableEdgeToEdge()
-//        setContentView(R.layout.activity_login)
-//        val idRegister = findViewById<TextView>(R.id.idRegister)
-//        idRegister.setOnClickListener {
-//            val intent = Intent( this, MainActivity::class.java)
-//            startActivity(intent)
-//        }
-
-
-        binding.button2.setOnClickListener {
-            validateRegistrationLogin()
+        binding.idRegister.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
+
+
+//        binding.btnSignIn.setOnClickListener {
+              clearForms()
+//            validateRegistrationLogin()
+//        }
     }
 
 
