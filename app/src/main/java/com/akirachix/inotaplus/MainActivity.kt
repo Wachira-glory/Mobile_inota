@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.akirachix.inotaplus.databinding.ActivityMainBinding
+import com.akirachix.new_mentorgram.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -36,10 +37,10 @@ class MainActivity : AppCompatActivity() {
             formError = true
             binding.tilSecondName.error = "Second name is required"
         }
-        val membershipNumberLogin=binding.etMembershipNumber.text.toString()
+        val membershipNumberLogin=binding.etMembershipNumberLogin.text.toString()
         if(membershipNumberLogin.isBlank()){
             formError=true
-            binding.tilMembershipNumber.error="Membership Number is required"
+            binding.tilMembershipNumberLogin.error="Membership Number is required"
         }
         val password=binding.etPassword.text.toString()
         if(password.isBlank()){
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         binding.tilSecondName.error=null
         binding.tilPassword.error=null
         binding.tilConfirmPassword.error=null
-        binding.tilMembershipNumber.error=null
+        binding.tilMembershipNumberLogin.error=null
         binding.tilPassword.error=null
         binding.tilConfirmPassword.error=null
     }
