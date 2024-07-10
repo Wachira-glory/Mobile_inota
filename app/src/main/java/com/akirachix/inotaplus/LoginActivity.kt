@@ -28,12 +28,10 @@ class LoginActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
-
         binding.button2.setOnClickListener {
             validateRegistrationLogin()
         }
     }
-
 
     fun validateRegistrationLogin(){
         var formError=false
@@ -55,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
     fun clearForms(){
         binding.tilFistNameLogin.error=null
         binding.tilPasswordLogin.error=null
